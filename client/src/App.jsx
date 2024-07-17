@@ -1,8 +1,24 @@
- import React from 'react'
+ import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
+import Dashboard from './pages/Dashboard'
+import Projects from './pages/Projects'
  
  export default function Main() {
    return (
-     <h1 className='text-3xl text-green-500'>Main</h1>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-in' element={<SignUp />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/projects' element={<Projects />} />
+      </Routes>
+      
+      </BrowserRouter>
    )
  }
  
