@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {store, persistore} from './redux/store.js'
+import {store, persistor} from './redux/store.js'
 import { Provider } from 'react-redux'
-import { PersisGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <PersisGate persistore={persistore}>
+  <PersistGate persistor={persistor}>
   <Provider store={store}>
     <App />
   </Provider>
-  </PersisGate>
+  </PersistGate>
 )
