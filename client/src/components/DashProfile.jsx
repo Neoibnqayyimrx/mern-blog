@@ -129,7 +129,7 @@ export default function DashProfile() {
     } catch (error) {
       dispatch(updateFailure(error.message));
       setUpdateUserError(error.message);
-    }
+     }
   };
   const handleDeleteUser = async () => {
     setShowModal(false);
