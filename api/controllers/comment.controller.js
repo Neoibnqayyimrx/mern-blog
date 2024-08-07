@@ -123,4 +123,4 @@ export const getcomments = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-};
+}; 
